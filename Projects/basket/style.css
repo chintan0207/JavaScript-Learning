@@ -1,0 +1,27 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 800px;
+    margin: auto;
+}
+
+button{
+    height: 50px;
+    width: 70px;
+}
+
+button i{
+    font-size: 20px;
+}
+
+.arrow-box{
+    display: flex;
+    gap: 30px;
+}
