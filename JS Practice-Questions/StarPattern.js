@@ -11,6 +11,13 @@ const simpleTringle = (row) =>{
         console.log(s);
     }
 }
+// row=3 j<=i
+// i=1 -> j=1 -> s="* "    console.log(s)
+// i=2 -> j=1 -> s="* "
+//        j=2 -> s="* * "  console.log(s)
+// i=3 -> j=1 -> s="* "
+//        j=2 -> s="* * "
+//        j=3 -> s="* * * " console.log(s)
 
 const regularTringle = (row) =>{
     
@@ -40,11 +47,11 @@ const oppositeSimpleTringle = (row) =>{
 }
 
 
-
-const aTringle = (row) =>{
-    
-    for(let i=1;i<=row;i++){
-        let line = "";
+ 
+const aTringle = (row) =>{                    
+                                              
+    for(let i=1;i<=row;i++){                  
+        let line = "";                        
         for(let s=row;s>=i;s--){
             line +="  ";
         }
@@ -56,6 +63,22 @@ const aTringle = (row) =>{
         console.log(line);
     }
 }
+// i=1, s=3  s>=i -> line = " "
+//      s=2       -> line = "  "
+//      s=1       -> line = "   "
+// i=1, j=1  j<=i -> line = "     *"   console.log(line)   "     *"
+
+// i=2, s=3  s>=i -> line = " "
+//      s=2       -> line = "  "
+// i=2, j=1  j<=i -> line = "   *"
+//      j=2       -> line = "   * *"    console.log(line)  "     *"
+                                                    //     "   * *"
+// i=3, s=3  s>=i -> line = " "
+// i=3, j=1  j<=i -> line = "  *"
+//      j=2       -> line = "  * *"
+//      j=3       -> line = "  * * *"   console.log(line)  "    *"
+//                                                         "  * *"
+//                                                         "* * *"
 
 const oppositeRegularTringle = (row) =>{
     for(let i=1;i<=row;i++){
@@ -100,6 +123,6 @@ regularTringle(5)
 console.log("")
 oppositeRegularTringle(5)
 console.log("")
-aTringle(5)
+aTringle(3)
 console.log("")
 zTringle(5)

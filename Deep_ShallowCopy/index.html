@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deep And Shallow copy</title>
+    <script src="script.js"></script>
+</head>
+
+<body style="font-family: cursive;">
+    <h1>Deep & Shallow copy</h1>
+    <p>
+        When to Use Each
+    </p>
+    <p>
+        Shallow Copy: Use it when you know the object does not have nested objects or you don't need to preserve the
+        immutability of nested structures.
+    <ol>
+        <li>by using Object.assign()</li>
+        <li>by using spread operator</li>
+    </ol>
+    </p>
+    <p>
+        Deep Copy: Use it when you need a complete clone of the object, ensuring changes to the copy do not affect the
+        original object and vice versa.
+    <ol>
+        <li>by using JSON.parse(JSON.stringify(origanal))
+            <ol>
+                <li>Note: This method has limitations (e.g., it can't copy functions, undefined, NaN, Infinity, or
+                    special object types like Date, Map, Set, etc.)</li>
+            </ol>
+        </li>
+        <li>by using library _.cloneDeep(original)</li>
+    </ol>
+    </p>
+</body>
+
+</html>
