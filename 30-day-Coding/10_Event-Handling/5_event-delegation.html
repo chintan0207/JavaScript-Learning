@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Event Delegation: Click on List</title>
+</head>
+
+<body>
+    <ul id="myList">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+
+    <div id="parentElement">
+        <button id="addChild">Add Child</button>
+    </div>
+    <script>
+        const myList = document.getElementById('myList');
+
+        myList.addEventListener('click', function (event) {
+            if (event.target && event.target.nodeName === "LI") {
+                console.log('Clicked item:', event.target.textContent);
+            }
+        });
+
+
+        const parentElement = document.getElementById('parentElement');
+        let childCount = 0;
+
+        parentElement.addEventListener('click', function (event) {
+            if (event.target && event.target.nodeName === "BUTTON" && event.target.id !== 'addChild') {
+                console.log('Clicked dynamic child button:', event.target.textContent);
+            }
+        });
+
+        const addChildButton = document.getElementById('addChild');
+        addChildButton.addEventListener('click', function () {
+            childCount++;
+            const newButton = document.createElement('button');
+            newButton.textContent = 'Dynamic Child ' + childCount;
+            parentElement.appendChild(newButton);
+        });
+
+    </script>
+</body>
+
+</html>

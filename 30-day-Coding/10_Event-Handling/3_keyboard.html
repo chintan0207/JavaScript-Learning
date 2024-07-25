@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyboard Event</title>
+</head>
+
+<body>
+    <div class="mydiv">
+        <input type="text" id="inputf">
+        <p class="output"></p>
+    </div>
+
+    <script>
+        let input = document.getElementById('inputf')
+
+        input.addEventListener('keydown', function () {
+            console.log("key pressed");
+        })
+
+        input.addEventListener('keyup', function () {
+            console.log("keyup");
+            document.querySelector('.output').textContent = "current value :" + input.value
+        })
+
+    </script>
+</body>
+
+</html>

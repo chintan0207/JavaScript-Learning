@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse event</title>
+</head>
+
+<body>
+    <div class="mydiv" style="height: 100px; width:200px; background-color:red">
+        <p id="p1">mouseover on me</p>
+        <p id="p2">mouseout</p>
+    </div>
+</body>
+
+<script>
+
+    let div = document.querySelector('.mydiv')
+    // let p = document.getElementById('p1')
+
+    div.addEventListener('mouseover', function () {
+        console.log("div over");
+        div.style.backgroundColor = "green";
+    })
+
+    div.addEventListener('mouseout', function () {
+        console.log("div out");
+        div.style.backgroundColor = "red";
+    })
+
+</script>
+
+</html>

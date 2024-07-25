@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form event</title>
+</head>
+
+<body>
+    <div style="padding: 20px; border:1px solid black; width:200px">
+        <form>
+            <input type="text" id="name" name="name" placeholder="Enter the name">
+            <select name="city" id="city">
+                <option value="">-select city-</option>
+                <option value="mumbai">Mumbai</option>
+                <option value="chennai">Chennai</option>
+                <option value="delhi">Delhi</option>
+            </select><br>
+            <button type="submit" style="margin-top: 10px;">Submit</button>
+        </form>
+    </div>
+    <p id="inputname"></p>
+    <p id="selectvalue"></p>
+
+    <script>
+        let myform = document.querySelector('form')
+
+        myform.addEventListener('submit', function (e) {
+            e.preventDefault()
+            console.log("submit");
+            const formdata = new FormData(myform)
+            for (const [name, value] of formdata) {
+                console.log(`${name} ${value}`);
+            }
+        })
+
+        let mycity = document.querySelector('#city')
+        let myname = document.querySelector('#name')
+
+        myname.addEventListener('change', function () {
+            document.querySelector('#inputname').textContent = myname.value
+
+        })
+
+        mycity.addEventListener('change', function () {
+            document.getElementById('selectvalue').textContent = mycity.value
+
+        })
+
+
+
+    </script>
+</body>
+
+</html>

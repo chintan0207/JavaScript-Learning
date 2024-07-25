@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dom Manipulation</title>
+</head>
+
+<body>
+    <div class="heading">
+        <h1>Dom Manipulation</h1>
+        <p id="firstp">
+            When a web page is loaded, the browser creates a Document Object Model
+            of the page.
+        </p>
+        <p id="secondp">The HTML DOM model is constructed as <span style="background-color: blueviolet; display:none"> a
+                tree of Objects </span></p>
+    </div>
+    <ul class="list">
+        <li class="list-item">JavaScript can change all the HTML elements in the page</li>
+        <li class="list-item">JavaScript can change all the HTML attributes in the page</li>
+        <li class="list-item">JavaScript can change all the CSS styles in the page</li>
+        <li class="list-item">JavaScript can remove existing HTML elements and attributes</li>
+        <li class="list-item">JavaScript can add new HTML elements and attributes</li>
+        <li class="list-item">JavaScript can react to all existing HTML events in the page</li>
+        <li class="list-item">JavaScript can create new HTML events in the page</li>
+    </ul>
+    <script>
+        let myp = document.getElementById('secondp')
+        // console.log(myp);
+        // console.log(myp.innerHTML);
+        //  console.log(myp.textContent);
+        // console.log(myp.innerText)
+        //let div = document.getElementsByClassName('heading');
+        //let div = document.querySelector('.heading');
+        //console.log(div);
+        //div.style.backgroundColor = "red"; // Apply style to the first element
+        //document.querySelector('.list').style.backgroundColor = 'yellow'
+
+
+
+    </script>
+</body>
+
+</html>

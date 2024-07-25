@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <img id="myImage" src="oldImage.jpg" alt="Old Image">
+    <p id="myParagraph">This is a paragraph.</p>
+
+    <script>
+        document.getElementById('myImage').src = 'newImage.jpg';
+
+        let paragraph = document.getElementById('myParagraph');
+        paragraph.classList.add('newClass');  // Add the class
+        //  paragraph.classList.remove('newClass');  // Remove the class
+    </script>
+
+</body>
+
+</html>

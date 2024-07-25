@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+
+<body>
+    <h1>Creating and appending elements</h1>
+    <ul class="language">
+        <li>ReactJs</li>
+        <li>AngularJs</li>
+        <li>JavaScript</li>
+    </ul>
+
+    <script>
+        const div = document.createElement('div')
+        //console.log(div);
+        document.body.appendChild(div)
+        const p1 = document.createElement('p')
+        p1.innerText = "Creating div element with text content in p"
+        //console.log(p1);
+        let fordiv = document.querySelector('div')
+        fordiv.appendChild(p1)
+
+        let ul = document.querySelector('.language')
+        let li = document.createElement('li')
+        li.innerText = 'Html'
+        ul.appendChild(li)
+
+        // let p2 = document.createElement('p').innerText = "for removing elements"
+        //console.log(p2);
+        //body.appendChild(p2)
+
+
+    </script>
+</body>
+
+</html>
